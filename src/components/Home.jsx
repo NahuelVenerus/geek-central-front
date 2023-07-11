@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getAllUsers } from "../services/admin/getAllUsers";
 
 function Home() {
-  return <div>Hola, soy un Home</div>;
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    setUsers(getAllUsers());
+  }, []);
+
+  return (
+    <>
+      {users[0] ? (
+        <>
+          {users.map((user) => (
+            <div>{user.name}</div>
+          ))}
+        </>
+      ) : (
+        <div>No hay users</div>
+      )}
+    </>
+  );
 }
 
 export default Home;

@@ -1,3 +1,1 @@
-require("dotenv").config();
-
-export const BASE_ROUTE = process.env.REACT_APP_BASE_ROUTE;
+export const BASE_ROUTE = "http://localhost:5173/api";
