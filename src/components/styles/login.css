@@ -1,4 +1,4 @@
-.signup-body {
+.login-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
   background-color: #2b2d42;
 }
 
-.form-container {
+.login-form-container {
   padding: 20px;
   color: black;
   width: 60vw;

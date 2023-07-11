@@ -1,0 +1,17 @@
+.error-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5em;
+}
+
+.form-field {
+  position: relative;
+  margin: 60px;
+}
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: red;
+}

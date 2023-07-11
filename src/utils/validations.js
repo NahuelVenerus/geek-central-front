@@ -2,7 +2,7 @@ import * as Yup from "yup";
 
 export const initialValues = {
   name: "",
-  lastName: "",
+  lastname: "",
   nickname: "",
   password: "",
   validatePassword: "",
@@ -16,7 +16,7 @@ export const validationSchema = Yup.object().shape({
   name: Yup.string()
     .required("Obligatory Field")
     .matches(/^[A-Za-z ]*$/, "Only alphabetic characters are allowed"),
-  lastName: Yup.string()
+  lastname: Yup.string()
     .required("Obligatory Field")
     .matches(/^[A-Za-z ]*$/, "Only alphabetic characters are allowed"),
   email: Yup.string()
