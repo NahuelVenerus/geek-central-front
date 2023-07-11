@@ -1,0 +1,17 @@
+.custom-submit-btn {
+  color: #ef233c;
+  background-color: #120910;
+  border: #120910 solid 2px;
+  border-radius: 20px;
+}
+
+.custom-submit-btn:hover {
+  color: #ef233c;
+  background-color: #30182b;
+  border: #30182b solid 2px;
+}
+
+button.btn:active {
+  background-color: #30182b !important;
+  border: #30182b solid 2px !important;
+}

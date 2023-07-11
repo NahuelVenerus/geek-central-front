@@ -1,65 +1,13 @@
-import React, { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React from "react";
+import { Formik, Form } from "formik";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEye,
-  faEyeSlash,
-  faExclamationTriangle,
-} from "@fortawesome/free-solid-svg-icons";
 import "./styles/signUp.css";
-import { validationSchema, initialValues } from "../utils/signUp";
+import { validationSchema, initialValues } from "../utils/validations";
 import Swal from "sweetalert2";
+import { RenderField } from "../commons/Fields";
+import FormsButtons from "../commons/FormsButtons";
 
 const SignUp = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  const renderField = (label, name, type = "text", passwordField = false) => (
-    <div className="form-group">
-      <label htmlFor={name} className="col-form-label">
-        {label}
-      </label>
-      <div className={passwordField ? "input-group" : ""}>
-        <Field
-          type={passwordField ? (showPassword ? "text" : "password") : type}
-          id={name}
-          name={name}
-          className="form-control"
-        />
-        {passwordField && (
-          <div className="input-group-append">
-            <span
-              className="input-group-text show-password"
-              onClick={() => setShowPassword(!showPassword)}
-              style={{
-                cursor: "pointer",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
-            </span>
-          </div>
-        )}
-      </div>
-      <br />
-
-      <ErrorMessage
-        name={name}
-        component={({ children }) => (
-          <div className="text-danger alert alert-danger">
-            <FontAwesomeIcon
-              icon={faExclamationTriangle}
-              className="mr-2 error-icon"
-            />
-            {children}
-          </div>
-        )}
-      />
-    </div>
-  );
-
   const handleSubmit = (values) => {
     if (values.password === values.validatePassword) {
       // Realizar el registro
@@ -79,61 +27,70 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        <Form>
-          <div className="row">
-            <div className="col-md-6">{renderField("Name", "name")}</div>
-            <div className="col-md-6">
-              {renderField("Last Name", "lastName")}
+    <div className="signup-body">
+      <div className="form-container">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <div className="row">
+              <div className="col-md-6">
+                {<RenderField label="Name" name="name" />}
+              </div>
+              <div className="col-md-6">
+                {<RenderField label=" Last Name" name="lastname" />}
+              </div>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="col-md-6">
-              {renderField("Nickname", "nickname")}
+            <div className="row">
+              <div className="col-md-6">
+                {<RenderField label="Nickname" name="nickname" />}
+              </div>
+              <div className="col-md-6">
+                {<RenderField label="E-mail" name="email" type="email" />}
+              </div>
             </div>
-            <div className="col-md-6">
-              {renderField("E-mail", "email", "email")}
+
+            <div className="row">
+              <div className="col-md-6">
+                {
+                  <RenderField
+                    label="Password"
+                    name="password"
+                    type="password"
+                    passwordField={true}
+                  />
+                }
+              </div>
+              <div className="col-md-6">
+                <RenderField
+                  label="Validate Password"
+                  name="validatePassword"
+                  type="password"
+                  passwordField={true}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="row">
-            <div className="col-md-6">
-              {renderField("Password", "password", "password", true)}
+            {<RenderField label="Address" name="address" />}
+
+            <div className="row">
+              <div className="col-md-6">
+                {<RenderField label="Zip Code" name="zip_code" />}
+              </div>
+              <div className="col-md-6">
+                {<RenderField label="City" name="city" />}
+              </div>
             </div>
-            <div className="col-md-6">
-              {renderField(
-                "Validate Password",
-                "validatePassword",
-                "password",
-                true
-              )}
-            </div>
-          </div>
 
-          {renderField("Address", "address")}
+            <br />
 
-          <div className="row">
-            <div className="col-md-6">
-              {renderField("Zip Code", "zip_code")}
-            </div>
-            <div className="col-md-6">{renderField("City", "city")}</div>
-          </div>
-
-          <br />
-
-          <div className="form-group row">
-            <button type="submit" className="btn btn-primary custom-submit-btn">
-              Submit
-            </button>
-          </div>
-        </Form>
-      </Formik>
+            <FormsButtons />
+          </Form>
+        </Formik>
+      </div>
     </div>
   );
 };
