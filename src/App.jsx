@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./components/Home";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
