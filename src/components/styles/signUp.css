@@ -1,0 +1,18 @@
+.signup-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #2b2d42;
+}
+
+.form-container {
+  padding: 20px;
+  color: black;
+  width: 60vw;
+  background-color: white;
+  border: 1px solid #ef233c;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 4px #ef233c;
+}
