@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import FakeProducts from "../seeders/FakeProducts";
 
 function Home() {
-  <FakeProducts />;
+  return <FakeProducts />;
 }
 //   const products = useSelector((state) => state.products);
 //   useEffect(() => {
