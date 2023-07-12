@@ -15,9 +15,10 @@ export function RenderField({
   passwordField = false,
 }) {
   const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <div className="form-group">
-      <label htmlFor={name} className="col-form-label">
+    <div className="form-field">
+      <label htmlFor={name} className="col-form-label label-styles">
         {label}
       </label>
       <div className={passwordField ? "input-group" : ""}>
@@ -48,13 +49,16 @@ export function RenderField({
 
       <ErrorMessage
         name={name}
-        component={({ children }) => (
-          <div className="text-danger alert alert-danger">
-            <FontAwesomeIcon
-              icon={faExclamationTriangle}
-              className="mr-2 error-icon"
-            />
-            {children}
+        render={(msg) => (
+          <div className="error-message">
+            <div className="error-message-bullet"></div>
+            <div className="error-message-text">
+              <FontAwesomeIcon
+                icon={faExclamationTriangle}
+                className="error-icon"
+              />
+              {msg}
+            </div>
           </div>
         )}
       />

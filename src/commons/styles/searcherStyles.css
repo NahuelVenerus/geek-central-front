@@ -1,0 +1,25 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border: 1px solid red;
+  border-radius: 0%;
+  background-color: lightgrey;
+  color: white;
+  padding: 5px;
+}
+
+.searchButton {
+  background-color: red;
+  color: white;
+  display: flex;
+  padding: 0.8%;
+  border: none;
+  justify-content: center;
+}
+
+.searchButton:active {
+  background-color: darkred;
+}
