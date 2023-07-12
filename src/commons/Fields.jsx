@@ -15,8 +15,13 @@ export function RenderField({
   passwordField = false,
 }) {
   const [showPassword, setShowPassword] = useState(false);
+
   return (
+<<<<<<< HEAD
     <div className="form-group">
+=======
+    <div className="form-field">
+>>>>>>> refs/remotes/origin/develop
       <label htmlFor={name} className="col-form-label label-styles">
         {label}
       </label>
@@ -48,6 +53,7 @@ export function RenderField({
 
       <ErrorMessage
         name={name}
+<<<<<<< HEAD
         className=""
         component={({ children }) => (
           <div className="text-danger alert alert-danger">
@@ -56,6 +62,18 @@ export function RenderField({
               className="mr-2 error-icon"
             />
             {children}
+=======
+        render={(msg) => (
+          <div className="error-message">
+            <div className="error-message-bullet"></div>
+            <div className="error-message-text">
+              <FontAwesomeIcon
+                icon={faExclamationTriangle}
+                className="error-icon"
+              />
+              {msg}
+            </div>
+>>>>>>> refs/remotes/origin/develop
           </div>
         )}
       />
