@@ -46,19 +46,15 @@ export function RenderField({
         )}
       </div>
       <br />
-
       <ErrorMessage
         name={name}
-        render={(msg) => (
-          <div className="error-message">
-            <div className="error-message-bullet"></div>
-            <div className="error-message-text">
-              <FontAwesomeIcon
-                icon={faExclamationTriangle}
-                className="error-icon"
-              />
-              {msg}
-            </div>
+        component={({ children }) => (
+          <div className="text-danger alert alert-danger">
+            <FontAwesomeIcon
+              icon={faExclamationTriangle}
+              className="mr-2 error-icon"
+            />
+            {children}
           </div>
         )}
       />
