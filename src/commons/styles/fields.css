@@ -4,14 +4,14 @@
   margin-right: 0.5em;
 }
 
-.form-field {
-  position: relative;
-  margin: 60px;
+.form-control {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.error-message {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  color: red;
+.label-styles {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
 }
