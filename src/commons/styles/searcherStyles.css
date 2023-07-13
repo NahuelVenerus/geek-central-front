@@ -4,22 +4,27 @@
 }
 
 .searchInput {
-  border: 1px solid red;
+  border: 1px solid #c7308c;
   border-radius: 0%;
-  background-color: lightgrey;
+  background-color: #c5d6d8;
   color: white;
-  padding: 5px;
+  padding: 1.9%;
 }
 
 .searchButton {
-  background-color: red;
+  background-color: #c7308c;
   color: white;
   display: flex;
-  padding: 0.8%;
+  padding: 4%;
   border: none;
   justify-content: center;
 }
 
 .searchButton:active {
   background-color: darkred;
+}
+
+.searchInput:focus {
+  outline: none !important;
+  box-shadow: 0 0 15px 4px #e94d7e !important;
 }
