@@ -10,6 +10,7 @@ const FakeProducts = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  console.log("producto", products);
   return (
     <div>
       <div className="row">

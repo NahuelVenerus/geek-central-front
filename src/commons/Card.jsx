@@ -78,6 +78,7 @@ const Card = ({ title, price, image, id }) => {
             alt="..."
           />
         </Link>
+        <hr className="card-line" />
         <div className="card-body">
           <h2 className="card-price">${price}</h2>
           <h5 className="card-shipping">
@@ -92,11 +93,13 @@ const Card = ({ title, price, image, id }) => {
                   Delete
                 </button>
                 <Link to={`/EditProduct/${id}`}>
-                  <button className="btn btn-info">Edit</button>
+                  <button className="btn btn-info button-styles">Edit</button>
                 </Link>
               </>
             ) : (
-              <button className="btn btn-info" /* onClick={handleAdd} */>
+              <button
+                className="btn btn-info button-styles" /* onClick={handleAdd} */
+              >
                 Add to Cart
               </button>
             )}

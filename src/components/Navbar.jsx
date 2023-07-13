@@ -5,6 +5,7 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import Searcher from "../commons/Searcher";
 import geekLogo from "../assets/geekLogo.png";
+import "./styles/navbar.css";
 
 const CustomNavbar = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,13 @@ const CustomNavbar = () => {
 
   return (
     <>
-      <Navbar bg="black" variant="dark" expand="md" fixed="top">
+      <Navbar
+        className="navbar-father"
+        bg="black"
+        variant="dark"
+        expand="md"
+        fixed="top"
+      >
         <Navbar.Brand as={Link} to="/">
           <img
             src={geekLogo}
