@@ -5,7 +5,11 @@ import React, { useEffect } from "react";
 import FakeProducts from "../seeders/FakeProducts";
 
 function Home() {
-  return <FakeProducts />;
+  return (
+    <div style={{ paddingTop: "14vh" }}>
+      <FakeProducts />;
+    </div>
+  );
 }
 //   const products = useSelector((state) => state.products);
 //   useEffect(() => {
