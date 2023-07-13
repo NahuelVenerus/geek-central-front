@@ -78,6 +78,7 @@ const Card = ({ title, price, image, id }) => {
             alt="..."
           />
         </Link>
+        <hr className="card-line" />
         <div className="card-body">
           <h2 className="card-price">${price}</h2>
           <h5 className="card-shipping">

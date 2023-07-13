@@ -3,9 +3,16 @@ import React, { useEffect } from "react";
 // import { getAllProducts } from "../services/products/getAllProducts";
 // import { setProducts } from "../state/products";
 import FakeProducts from "../seeders/FakeProducts";
+import "./styles/home.css";
 
 function Home() {
-  return <FakeProducts />;
+  return (
+    <div className="home-body">
+      <div className="home-container">
+        <FakeProducts />
+      </div>
+    </div>
+  );
 }
 //   const products = useSelector((state) => state.products);
 //   useEffect(() => {

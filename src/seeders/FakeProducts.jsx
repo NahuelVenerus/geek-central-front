@@ -10,9 +10,9 @@ const FakeProducts = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  console.log("producto", products);
   return (
     <div>
-      <h2>Fake Store Products</h2>
       <div className="row">
         {products.map((product) => (
           <Card
