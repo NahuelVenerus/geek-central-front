@@ -59,9 +59,9 @@ export default function Profile() {
                   {nickname}
                 </p>
                 <div className="d-flex justify-content-center mb-2">
-                  <MDBBtn className="letter-subtitle">Editar Perfil</MDBBtn>
+                  <MDBBtn className="letter-subtitle">Edit Profile</MDBBtn>
                   <MDBBtn className="ms-1 btn btn-danger letter-subtitle">
-                    Borrar Perfil
+                    Delete Perfil
                   </MDBBtn>
                 </div>
               </MDBCardBody>
@@ -72,7 +72,7 @@ export default function Profile() {
               <MDBCardBody>
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Nombre Completo</MDBCardText>
+                    <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">
@@ -92,7 +92,7 @@ export default function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Numero de Teléfono</MDBCardText>
+                    <MDBCardText>Phone</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">{phone}</MDBCardText>
@@ -101,7 +101,7 @@ export default function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Dirección</MDBCardText>
+                    <MDBCardText>Address</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">{address}</MDBCardText>
@@ -110,7 +110,7 @@ export default function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Código Postal</MDBCardText>
+                    <MDBCardText>Zip Code</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">{zip_code}</MDBCardText>
@@ -119,7 +119,7 @@ export default function Profile() {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Localidad</MDBCardText>
+                    <MDBCardText>City</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">{city}</MDBCardText>
