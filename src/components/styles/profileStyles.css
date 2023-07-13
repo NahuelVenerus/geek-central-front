@@ -1,23 +1,38 @@
-.profileContainer {
-  color: white;
+.profile-container {
   border: 1px solid lightgrey;
   border-radius: 2%;
   padding: 3%;
-  margin-top: 5%;
-  background-color: #2b2d42;
+  margin-top: 9%;
+  background-color: #3b364b;
   box-shadow: 0 0 15px 4px #e94d7e;
 }
 
-.profilePicture {
+.profile-picture {
   width: 160px;
 }
 
 .nickname {
+  color: white !important;
   margin-top: 5%;
   font-size: 35px;
 }
 
 .text-center {
-  background-color: #2b2d42;
+  color: white !important;
+  background-color: #3b364b;
   box-shadow: 0 0 15px 4px #e94d7e;
+}
+
+.letter-subtitle {
+  font-weight: bold;
+  color: white !important;
+}
+
+.text-muted {
+  font-weight: lighter;
+  color: white !important;
+}
+
+.profile-buttons {
+  padding-bottom: 5%;
 }

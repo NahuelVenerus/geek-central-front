@@ -48,27 +48,31 @@ export default function Profile() {
   } = user;
   // const user = useSelector((state) => state.user);
   return (
-    <MDBContainer className="profileContainer py-5">
+    <MDBContainer className="profile-container py-5">
       <MDBRow>
         <MDBCol lg="4">
-          <MDBCard className="mb-4">
+          <MDBCard className="mb-4 letter-color">
             <MDBCardBody className="text-center">
               <MDBCardImage
                 src={img}
                 alt="avatar"
-                className="profilePicture rounded-circle"
+                className="profile-picture rounded-circle"
                 fluid
               />
-              <p className="nickname text-muted mb-4">{nickname}</p>
+              <p className="nickname text-muted mb-4 letter-subtitle">
+                {nickname}
+              </p>
               <div className="d-flex justify-content-center mb-2">
-                <MDBBtn>Editar Perfil</MDBBtn>
-                <MDBBtn className="ms-1 btn btn-danger">Borrar Perfil</MDBBtn>
+                <MDBBtn className="letter-subtitle">Editar Perfil</MDBBtn>
+                <MDBBtn className="ms-1 btn btn-danger letter-subtitle">
+                  Borrar Perfil
+                </MDBBtn>
               </div>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
         <MDBCol lg="8">
-          <MDBCard className="text-center mb-4">
+          <MDBCard className="text-center mb-4 letter-subtitle">
             <MDBCardBody>
               <MDBRow>
                 <MDBCol sm="3">

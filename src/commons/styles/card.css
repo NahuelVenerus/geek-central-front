@@ -1,8 +1,8 @@
-.card {
+.product-card {
   transition: box-shadow 0.3s ease;
 }
 
-.card:hover {
+.product-card:hover {
   box-shadow: 0 0 15px 4px #ef233c;
   transform: translate(0, -10px);
   border: 2px solid #ef233c;
@@ -12,7 +12,7 @@
   padding: 16px;
 }
 
-.card-text {
+.product-card-text {
   display: flex;
   max-height: 6vh;
   padding-bottom: 20px;
