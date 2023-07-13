@@ -1,0 +1,49 @@
+.card {
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px 4px #ef233c;
+  transform: translate(0, -10px);
+  border: 2px solid #ef233c;
+}
+
+.card-img-top {
+  padding: 16px;
+}
+
+.card-text {
+  display: flex;
+  max-height: 6vh;
+  padding-bottom: 20px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  color: #30182b;
+  background-color: #ef233c;
+  background-color: #ef233c;
+  border: #ef233c solid 2px;
+}
+
+.btn:hover {
+  color: #30182b;
+  background-color: #f9394f;
+  border: #f25366 solid 2px;
+}
+
+.card-shipping {
+  font-size: 18px;
+  color: green;
+}
+
+@media (max-width: 1007px) {
+  .card.pink-shadow {
+    background-color: lightpink;
+    box-shadow: 0 0 15px 4px #ef233c;
+  }
+}
