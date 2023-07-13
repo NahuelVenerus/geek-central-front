@@ -3,11 +3,14 @@ import React, { useEffect } from "react";
 // import { getAllProducts } from "../services/products/getAllProducts";
 // import { setProducts } from "../state/products";
 import FakeProducts from "../seeders/FakeProducts";
+import "./styles/home.css";
 
 function Home() {
   return (
-    <div style={{ paddingTop: "14vh" }}>
-      <FakeProducts />;
+    <div className="home-body">
+      <div className="home-container">
+        <FakeProducts />
+      </div>
     </div>
   );
 }
