@@ -1,7 +1,4 @@
-import { createAction, createReducer } from "@reduxjs/toolkit";
-
-export const setUser = createAction("SET_USER");
-export const setLogOut = createAction("LOG_OUT");
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   id: null,
@@ -15,6 +12,15 @@ const initialState = {
   isAdmin: false,
 };
 
-export const userReducer = createReducer(initialState, {
-  [setUser]: (state, action) => action.payload,
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+  reducers: {
+    setUser: (state, action) => {
+      return action.payload;
+    },
+  },
 });
+
+export const { setUSer } = userSlice.actions;
+export default userSlice.reducer;

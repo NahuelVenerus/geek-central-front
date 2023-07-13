@@ -2,16 +2,21 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
-import FakeProducts from "./seeders/FakeProducts";
-import ProductDetail from "./components/ProductDetail";
+import Home from "./components/Home";
+import CustomNavbar from "./components/Navbar";
+import Profile from "./components/Profile";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/signUp" element={<SignUp />} />
-      <Route path="/login" element={<LogIn />} />
-      <Route path="/product-detail/:id" element={<ProductDetail />} />
-    </Routes>
+    <>
+      <CustomNavbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </>
   );
 }
 

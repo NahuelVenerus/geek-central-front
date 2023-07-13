@@ -8,11 +8,12 @@
 }
 
 .form-container {
-  padding: 20px;
+  padding: 1%;
   color: black;
   width: 60vw;
   background-color: white;
   border: 1px solid #ef233c;
   border-radius: 20px;
   box-shadow: 0 0 30px 4px #ef233c;
+  margin: 7%;
 }

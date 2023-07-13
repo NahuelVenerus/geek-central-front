@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../commons/card/Card";
+import Card from "../commons/Card";
 
 const FakeProducts = () => {
   const [products, setProducts] = useState([]);
@@ -10,9 +10,9 @@ const FakeProducts = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  console.log("producto", products);
   return (
     <div>
-      <h2>Fake Store Products</h2>
       <div className="row">
         {products.map((product) => (
           <Card
