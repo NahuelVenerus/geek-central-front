@@ -12,7 +12,6 @@ const FakeProducts = () => {
 
   return (
     <div>
-      <h2>Fake Store Products</h2>
       <div className="row">
         {products.map((product) => (
           <Card
