@@ -1,0 +1,50 @@
+.the-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.profile-container {
+  border: 1px solid lightgrey;
+  border-radius: 2%;
+  padding: 3%;
+  background-color: #413e4f;
+  box-shadow: 0 0 15px 4px #e94d7e;
+}
+
+.profile-picture {
+  width: 160px;
+}
+
+.nickname {
+  color: white !important;
+  margin-top: 5%;
+  font-size: 35px;
+}
+
+.text-center {
+  color: white !important;
+  background-color: #2b2d42;
+  box-shadow: 0 0 15px 4px #e94d7e;
+}
+
+.letter-subtitle {
+  font-weight: bold;
+  color: white !important;
+}
+
+.text-muted {
+  font-weight: lighter;
+  color: white !important;
+}
+
+.profile-buttons {
+  padding-bottom: 5%;
+}
+
+@media (max-width: 380px) {
+  .the-container {
+    margin-top: 35%;
+  }
+}

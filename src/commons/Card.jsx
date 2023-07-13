@@ -67,7 +67,7 @@ const Card = ({ title, price, image, id }) => {
   return (
     <div className="col d-flex justify-content-center mb-4">
       <div
-        className="card pink-shadow mb-1 bg-white rounded"
+        className="product-card card pink-shadow mb-1 bg-white rounded"
         style={{ width: "20rem" }}
       >
         <Link style={{ textDecoration: "none" }} to={`/product-detail/${id}`}>
@@ -84,7 +84,7 @@ const Card = ({ title, price, image, id }) => {
           <h5 className="card-shipping">
             Free Shipping <FaTruck />
           </h5>
-          <h6 className="card-text">{truncatedTitle}</h6>
+          <h6 className="product-card-text card-text">{truncatedTitle}</h6>
 
           <div className="d-flex" style={{ height: "50px" }}>
             {is_admin ? (
@@ -93,11 +93,13 @@ const Card = ({ title, price, image, id }) => {
                   Delete
                 </button>
                 <Link to={`/EditProduct/${id}`}>
-                  <button className="btn btn-info">Edit</button>
+                  <button className="btn btn-info button-styles">Edit</button>
                 </Link>
               </>
             ) : (
-              <button className="btn btn-info" /* onClick={handleAdd} */>
+              <button
+                className="btn btn-info button-styles" /* onClick={handleAdd} */
+              >
                 Add to Cart
               </button>
             )}

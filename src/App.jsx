@@ -1,20 +1,22 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Provider } from "react-redux";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
 import Home from "./components/Home";
-import store from "./state/store";
+import CustomNavbar from "./components/Navbar";
+import Profile from "./components/Profile";
 
 function App() {
   return (
-    <Provider store={store}>
+    <>
+      <CustomNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Provider>
+    </>
   );
 }
 
