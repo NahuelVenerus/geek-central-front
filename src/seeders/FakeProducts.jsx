@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../commons/card/Card";
+import Card from "../commons/Card";
 
 const FakeProducts = () => {
   const [products, setProducts] = useState([]);
