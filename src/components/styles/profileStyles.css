@@ -1,0 +1,23 @@
+.profileContainer {
+  color: white;
+  border: 1px solid lightgrey;
+  border-radius: 2%;
+  padding: 3%;
+  margin-top: 5%;
+  background-color: #2b2d42;
+  box-shadow: 0 0 15px 4px #e94d7e;
+}
+
+.profilePicture {
+  width: 160px;
+}
+
+.nickname {
+  margin-top: 5%;
+  font-size: 35px;
+}
+
+.text-center {
+  background-color: #2b2d42;
+  box-shadow: 0 0 15px 4px #e94d7e;
+}
