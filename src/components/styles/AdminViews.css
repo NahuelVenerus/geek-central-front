@@ -1,0 +1,35 @@
+.products-button {
+  height: 54vh;
+  font-size: 300%;
+  width: 100%;
+}
+
+.admin-cards {
+  width: 18rem;
+}
+
+.orders-button {
+  height: 54vh;
+  font-size: 300%;
+  width: 100%;
+  background-color: #ef233c;
+}
+
+.orders-button:hover {
+  background-color: rgb(204, 30, 30);
+}
+
+.users-button {
+  height: 54vh;
+  font-size: 300%;
+  width: 100%;
+  background-color: #59cd90;
+}
+
+.users-button:hover {
+  background-color: rgb(18, 177, 18);
+}
+
+.card-link {
+  text-decoration: none;
+}
