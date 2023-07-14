@@ -6,7 +6,7 @@ export const getUser = async () => {
     const user = await axios.get(`${BASE_ROUTE}/users/me`, {
       withCredentials: true,
     });
-    return user;
+    return user.data;
   } catch (error) {
     console.log("getUser service error", error);
   }
