@@ -5,13 +5,14 @@ export const login = async (nickname, password) => {
   try {
     const loggedUser = await axios.post(
       `${BASE_ROUTE}/users/login`,
+
       {
-        nickname: nickname.value,
-        password: password.value,
+        nickname: nickname,
+        password: password,
       },
       { withCredentials: true }
     );
-    return loggedUser;
+    return loggedUser.data;
   } catch (error) {
     console.log("login service error", error);
   }
