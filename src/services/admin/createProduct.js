@@ -19,7 +19,7 @@ export const createProduct = async (
         image: image.value,
       }
     );
-    return createdProduct;
+    return createdProduct.data;
   } catch (error) {
     console.log("createProduct service error", error);
   }

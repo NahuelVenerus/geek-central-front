@@ -9,7 +9,7 @@ export const deleteProduct = async (id) => {
         is_deleted: true,
       }
     );
-    return deletedProduct;
+    return deletedProduct.data;
   } catch (error) {
     console.log("deleteProduct service error", error);
   }
