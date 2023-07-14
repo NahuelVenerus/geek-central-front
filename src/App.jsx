@@ -5,12 +5,14 @@ import LogIn from "./components/LogIn";
 import Home from "./components/Home";
 import CustomNavbar from "./components/Navbar";
 import Profile from "./components/Profile";
+import AdminViews from "./components/AdminViews";
 
 function App() {
   return (
     <>
       <CustomNavbar />
       <Routes>
+        <Route path="/admin" element={<AdminViews />} />
         <Route path="/" element={<Home />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
