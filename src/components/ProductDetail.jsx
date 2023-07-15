@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { BASE_ROUTE } from "../config";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./styles/productDetail.css";
 
 import { FaTruck } from "react-icons/fa";
@@ -24,35 +25,46 @@ function ProductDetail() {
   }, []);
 
   return (
-    <div className="container py-4 custom-image">
-      <div className="card-detail">
-        <div className="row g-0">
-          <div className="col-4">
-            <img
+    <Container fluid className="py-4 custom-image">
+      <div className="product-detail">
+        <Row>
+          <Col xs={12} md={4}>
+            <Image
               src={product.image}
-              className="card-img-top img-fluid rounded-start"
+              className="product-detail-img-top img-fluid rounded-start"
               alt=""
             />
-          </div>
-          <div className="col-8">
-            <div className="card-body">
-              <h5 class="card-title product-title">{product.title}</h5>
+          </Col>
+          <Col xs={12} md={8}>
+            <div className="product-detail-body">
+              <h5 className="product-detail-title product-title">
+                {product.title}
+              </h5>
               <hr />
-              <h5 class="card-title">Price:</h5>
-              <h5 class="card-title">${product.price}</h5>
+              <h5 className="product-detail-title">Price: ${product.price}</h5>
               <hr />
 
-              <h5 class="card-title">Description:</h5>
-              <p class="card-text">{product.description}</p>
+              <h5 className="product-detail-title">Description:</h5>
+              <p className="product-detail-text">{product.description}</p>
               <hr />
-              <h5 className="detail-product-shipping">
+
+              <h5>
                 Free Shipping <FaTruck />
               </h5>
+              <hr />
+
+              <Col xs={12} md={4}>
+                <div className="d-flex justify-content-center justify-content-md-start mt-3">
+                  <Button variant="info btn-lg" className="button-style">
+                    Add to Cart
+                  </Button>
+                </div>
+              </Col>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
-    </div>
+    </Container>
   );
 }
 
