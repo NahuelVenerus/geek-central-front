@@ -4,7 +4,7 @@ import { BASE_ROUTE } from "../../config";
 export const signup = async (
   name,
   nickname,
-  lastName,
+  lastname,
   address,
   zip_code,
   city,
@@ -12,18 +12,33 @@ export const signup = async (
   password
 ) => {
   try {
-    await axios.post(`${BASE_ROUTE}/users/signup`),
+    console.log(
+      "userData",
+      name,
+      nickname,
+      lastname,
+      address,
+      zip_code,
+      city,
+      email,
+      password
+    );
+    await axios.post(
+      `${BASE_ROUTE}/users/signup`,
       {
-        name: name.value,
-        nickname: nickname.value,
-        lastName: lastName.value,
-        address: address.value,
-        zip_code: zip_code.value,
-        city: city.value,
-        email: email.value,
-        password: password.value,
+        name: name,
+        nickname: nickname,
+        lastname: lastname,
+        address: address,
+        zip_code: zip_code,
+        city: city,
+        email: email,
+        password: password,
       },
-      { withCredentials: true };
+      {
+        withCredentials: true,
+      }
+    );
   } catch (error) {
     console.log("signup service error", error);
   }

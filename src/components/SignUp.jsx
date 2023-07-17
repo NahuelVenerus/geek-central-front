@@ -6,23 +6,49 @@ import { validationSchema, initialValues } from "../utils/validations";
 import Swal from "sweetalert2";
 import { RenderField } from "../commons/Fields";
 import FormsButtons from "../commons/FormsButtons";
+import { signup } from "../services/users/signup";
 
 const SignUp = () => {
-  const handleSubmit = (values) => {
-    if (values.password === values.validatePassword) {
-      // Realizar el registro
-      Swal.fire(
-        "Successful Registration",
-        "Registration has been completed successfully.",
-        "success"
-      );
-    } else {
-      // Mostrar un mensaje de error o realizar alguna acción alternativa
-      Swal.fire(
-        "Error",
-        "Registration could not be completed. The passwords do not match.",
-        "error"
-      );
+  const handleSubmit = async (values) => {
+    try {
+      if (values.password === values.validatePassword) {
+        const {
+          name,
+          nickname,
+          lastname,
+          address,
+          zip_code,
+          city,
+          email,
+          password,
+        } = values;
+
+        await signup(
+          name,
+          nickname,
+          lastname,
+          address,
+          zip_code,
+          city,
+          email,
+          password
+        );
+        // Realizar el registro
+        Swal.fire(
+          "Successful Registration",
+          "Registration has been completed successfully.",
+          "success"
+        );
+      } else {
+        // Mostrar un mensaje de error o realizar alguna acción alternativa
+        Swal.fire(
+          "Error",
+          "Registration could not be completed. The passwords do not match.",
+          "error"
+        );
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 

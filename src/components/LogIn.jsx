@@ -1,5 +1,5 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Formik, Form } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { setUser } from "../state/user";
@@ -10,6 +10,7 @@ import Swal from "sweetalert2";
 import "./styles/login.css";
 
 import * as Yup from "yup";
+import { checkUserIsLogged } from "../services/users/checkUserIsLogged";
 
 function LogIn() {
   const dispatch = useDispatch();
@@ -39,7 +40,6 @@ function LogIn() {
     try {
       const nickname = values.nickname;
       const password = values.password;
-
       const loggedUser = await login(nickname, password);
       dispatch(setUser(loggedUser));
       navigate("/");
@@ -52,6 +52,10 @@ function LogIn() {
       console.log(" handlelogin error", error);
     }
   };
+
+  useEffect(async () => {
+    await checkUserIsLogged();
+  }, [dispatch]);
 
   return (
     <div className="login-body ">
