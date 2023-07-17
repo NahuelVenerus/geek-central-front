@@ -6,14 +6,16 @@ import Home from "./components/Home";
 import CustomNavbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import AdminViews from "./components/AdminViews";
+import Cart from "./components/Cart";
 
 function App() {
   return (
     <>
       <CustomNavbar />
       <Routes>
-        <Route path="/admin" element={<AdminViews />} />
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<AdminViews />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/profile" element={<Profile />} />
