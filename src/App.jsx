@@ -10,7 +10,7 @@ import AdminViews from "./components/AdminViews";
 import { getUser } from "./services/users/getUser";
 import { useDispatch } from "react-redux";
 import { setUser } from "./state/user";
-
+import EditProduct from "./components/EditProduct";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +38,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
+        <Route path="/editProduct/:id" element={<EditProduct />} />
       </Routes>
     </>
   );

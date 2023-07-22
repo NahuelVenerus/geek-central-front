@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/* import React, { useEffect, useState } from "react";
 import Card from "../commons/Card";
 
 const FakeProducts = () => {
@@ -29,3 +29,4 @@ const FakeProducts = () => {
 };
 
 export default FakeProducts;
+ */

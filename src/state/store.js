@@ -5,6 +5,7 @@ import { finalPriceReducer } from "./finalPrice";
 import { userListReducer } from "./usersList";
 import productsReducer from "./products";
 import userReducer from "./user";
+import productReducerEdit from "./editProduct";
 
 const reducers = combineReducers({
   user: userReducer,
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   productList: productListReducer,
   finalPrice: finalPriceReducer,
   userList: userListReducer,
+  editProduct: productReducerEdit,
 });
 
 const store = configureStore({

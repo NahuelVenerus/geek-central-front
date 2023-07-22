@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 // import { useSelector } from "react-redux";
 // import { getAllProducts } from "../services/products/getAllProducts";
 // import { setProducts } from "../state/products";
-import FakeProducts from "../seeders/FakeProducts";
+import Card from "../commons/Card";
 import "./styles/home.css";
 import { useSelector } from "react-redux";
 
@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className="home-body">
       <div className="home-container">
-        <FakeProducts />
+        <Card />
       </div>
     </div>
   );
