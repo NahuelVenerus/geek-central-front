@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
@@ -12,28 +12,17 @@ import { useDispatch } from "react-redux";
 import { setUser } from "./state/user";
 import EditProduct from "./components/EditProduct";
 
+import Cart from "./components/Cart";
+
+
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const userPersistenceData = await getUser();
-        dispatch(setUser(userPersistenceData));
-      } catch (error) {
-        console.log("persistence-error", error);
-      }
-    };
-
-    fetchData();
-  }, [dispatch]);
-
   return (
     <>
       <CustomNavbar />
       <Routes>
-        <Route path="/admin" element={<AdminViews />} />
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<AdminViews />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/profile" element={<Profile />} />
