@@ -11,17 +11,18 @@ function ProductDetail() {
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
-  const getProduct = (id) => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("PRODUCT DETAIL", data);
-        setProduct(data);
-      });
+  const getProducts = (id) => {
+    axios
+      .get(`${BASE_ROUTE}/products/${id}`)
+      .then((fetchedProduct) => {
+        setProduct(fetchedProduct.data);
+        console.log("FETCH PRODUCT", fetchedProduct);
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    getProduct(id);
+    getProducts(id);
   }, []);
 
   return (
@@ -31,14 +32,14 @@ function ProductDetail() {
           <Col xs={12} md={4}>
             <Image
               src={product.image}
-              className="product-detail-img-top img-fluid rounded-start"
-              alt=""
+              className="img-fluid rounded-start image-style-detail"
+              alt="product image"
             />
           </Col>
           <Col xs={12} md={8}>
             <div className="product-detail-body">
               <h5 className="product-detail-title product-title">
-                {product.title}
+                {product.name}
               </h5>
               <hr />
               <h5 className="product-detail-title">Price: ${product.price}</h5>

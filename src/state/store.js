@@ -4,8 +4,12 @@ import { userListReducer } from "./usersList";
 import cartReducer from "./cart";
 import productsReducer from "./products";
 import userReducer from "./user";
+
+import productReducerEdit from "./editProduct";
+
 import cartTotalReducer from "./cartTotal";
 import cartProductReducer from "./cartProduct";
+
 
 const reducers = combineReducers({
   user: userReducer,
@@ -16,6 +20,7 @@ const reducers = combineReducers({
   cartProduct: cartProductReducer,
   finalPrice: finalPriceReducer,
   userList: userListReducer,
+  editProduct: productReducerEdit,
 });
 
 const store = configureStore({
