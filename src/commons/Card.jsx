@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BASE_ROUTE } from "../config";
 import { Container, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { setProductList } from "../state/productList";
+// import { setProductList } from "../state/productList";
 import { getProductEdit } from "../state/editProduct";
 import Swal from "sweetalert2";
 import "./styles/card.css";

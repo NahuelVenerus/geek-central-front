@@ -53,8 +53,8 @@ function LogIn() {
     }
   };
 
-  useEffect(async () => {
-    await checkUserIsLogged();
+  useEffect(() => {
+    checkUserIsLogged();
   }, [dispatch]);
 
   return (
